@@ -75,13 +75,13 @@ const TodoList = () => {
           </p>
         </div>
         {/* toggle navbar */}
-        <div className="flex justify-between items-center gap-52 my-4 px-8 w-full cursor-pointer">
+        <div className="flex justify-between items-center gap-52 my-4 px-8 w-full cursor-pointer border-b-2 border-techLiftGray4">
           <div onClick={() => setFilter("All")}>
             <p
               className={`${
                 activeLink === 0
-                  ? "  border-techLiftPrimary2 underline underline-offset-[20px] text-xl decoration-techLiftPrimary2 decoration-4 "
-                  : "text-techLiftBlack text-xl"
+                  ? " border-b-4 border-techLiftPrimary2  px-6  pb-6  border-offset-[20px] text-xl  "
+                  : "text-techLiftBlack pb-6 text-xl"
               } `}
               onClick={() => handleClick(0)}
             >
@@ -92,8 +92,8 @@ const TodoList = () => {
             <p
               className={`${
                 activeLink === 1
-                  ? "  border-techLiftPrimary2 underline underline-offset-[20px] text-xl decoration-techLiftPrimary2 decoration-4 "
-                  : "text-techLiftBlack text-xl"
+                  ? "  border-b-4 border-techLiftPrimary2  px-6  pb-6  text-xl "
+                  : "text-techLiftBlack pb-6 text-xl"
               } `}
               onClick={() => handleClick(1)}
             >
@@ -104,8 +104,8 @@ const TodoList = () => {
             <p
               className={`${
                 activeLink === 2
-                  ? "  border-techLiftPrimary2 underline underline-offset-[20px] text-xl decoration-techLiftPrimary2 decoration-4 "
-                  : "text-techLiftBlack text-xl"
+                  ? "  border-b-4 border-techLiftPrimary2  px-3  pb-6  text-xl  "
+                  : "text-techLiftBlack pb-6 text-xl"
               } `}
               onClick={() => handleClick(2)}
             >
@@ -113,7 +113,7 @@ const TodoList = () => {
             </p>
           </div>
         </div>
-        <hr className="w-full border border-techLiftGray4" />
+
         <br />
         {/* todoList form */}
         <form onSubmit={addTask}>
@@ -154,9 +154,9 @@ const TodoList = () => {
                     {task.text}
                   </span>
                 </div>
-                 <Button onClick={() => deleteTask(task.id)}>
+                <Button onClick={() => deleteTask(task.id)}>
                   <AiOutlineDelete className="h-6 w-6 text-techLiftGray" />
-                </Button> 
+                </Button>
               </li>
             ))}
           </ul>
